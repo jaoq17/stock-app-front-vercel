@@ -45,7 +45,7 @@ export default function Create() {
     return (
         <>
             <div>
-            <h1>Crear nuevo Producto</h1>
+            <h1>Crear nuevo producto</h1>
                 <form>
                     <input type="text" name="name" value={product.name} onChange={handleChange}/>
                     <input type="number" name="price" value={product.price} onChange={handleChange}/>
