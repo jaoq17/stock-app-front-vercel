@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from '../../../styles/screate.css'
 
 
@@ -21,8 +21,8 @@ export default function Create() {
     }
 
     const handleClick = (e) => {
-        e.preventDefault()                        // el evento submit de boton siempre refresca la pagina, este codigo permite ese efecto
-        fetch('http://localhost:5000/api/v1/products', {
+        e.preventDefault()                        // el evento preventDefault submit de boton siempre refresca la pagina, este codigo permite ese efecto
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,12 +33,12 @@ export default function Create() {
             // .then((res) => {
             //     return res.json()
 
-            .then ((data) =>{
-            setProduct(initialState)
-            console.log('Producto creado con éxito!')
+            .then((data) => {
+                setProduct(initialState)
+                console.log('Producto creado con éxito!')
         })
-        .catch( err => {
-            console.log({ err })
+            .catch( err => {
+                console.log({ err })
         })
     }
 
