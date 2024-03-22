@@ -1,0 +1,94 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: 0 auto;
+    
+}
+
+.onene{
+    outline: none;
+}
+
+.cursorp{
+    cursor: pointer;
+}
+
+.df {
+    display: flex;
+
+}
+
+/* df aic jcsb
+
+df fdc */
+
+.fdc {
+    flex-direction: column;
+}
+
+.aic {
+    align-items: center;
+
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.p5 {
+    padding: 0.5rem;
+
+}
+
+.br5 {
+    border-radius: 0.5rem;
+}
+
+.mb5 {
+    margin-bottom: 0.5rem;
+
+}
+
+.product {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 0.5rem ;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+}
+
+
+button {
+    padding: 0.5rem 0.75rem;
+    border-radius:0.5rem;
+    border: none;
+    background-color: rgba(red, green, blue, alpha);
+}
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    width: 50rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+}
+
+.products-container {
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 20rem;
+    padding: 0.5rem;
+}
+
