@@ -80,13 +80,12 @@ export default function Home() {
         })
         const data = await res.json()    // ya no va, elimine el codigo de abajo..Es lo mismo que abajo, pero tiene un return implicito, para ahorar lineas de codigo
         console.log({ data })
-        setProduct(initialMovementState)
+        setMovement(initialMovementState)
         setSelectedProductId(null)
-        
-        // fetchProducts()
+        fetchProducts()
         } catch (error) {
           console.log({ error })
-        }                    
+        }                 
     }
 
     const fetchProducts = () => {
@@ -163,7 +162,7 @@ export default function Home() {
                 
               </div>
               <div className='products-container'>
-                {products.map(({ _id, name, price}) =>(
+                {products.map(({ _id, name, price, stock}) =>(
                   <div 
                     onClick={() => setSelectedProductId(_id)}
                     key={_id}
@@ -177,7 +176,12 @@ export default function Home() {
                     >
                     <span>{name}</span>
                     <div className=' df aic'>
-                    <span className='mr5'>${price}</span>
+                      <div className=' df fdc mr5'>
+                        <span>${price}</span>
+                        <span>Stock: {stock}</span>
+
+
+                      </div>
                     <span
                       style={{color: "red", cursor: 'pointer'}}
                       onClick={() => {
